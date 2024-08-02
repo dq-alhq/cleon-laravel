@@ -3,7 +3,7 @@
     "framework": null,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.6.0" },
-        "bootstrap/ssr/ssr.js": { "runtime": "vercel-node@3.2.0" }
+        "bootstrap/ssr/ssr.js": { "runtime": "@vercel/node" }
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
