@@ -4,6 +4,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+    build: { chunkSizeWarningLimit: 1600 },
     plugins: [
         laravel({
             input: 'resources/js/app.tsx',
