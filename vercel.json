@@ -1,6 +1,7 @@
 {
     "version": 2,
     "framework": null,
+    "builds": [{ "src": "./bootstrap/ssr/ssr.js", "use": "@vercel/node" }],
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
@@ -9,7 +10,7 @@
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "public": true,
-    "buildCommand": "vite build",
+    "buildCommand": "vite build && vite build --ssr",
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
