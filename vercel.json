@@ -1,9 +1,9 @@
 {
     "version": 2,
     "framework": null,
+    "builds": [{ "src": "./bootstrap/ssr/ssr.js", "use": "@vercel/node" }],
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" },
-        "bootstrap/ssr/ssr.js": { "runtime": "@vercel/node" }
+        "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
